@@ -2,18 +2,14 @@ name: 'Terraform destroy'
 on:
   workflow_dispatch
 env:
-  AWS_ACCESS_KEY_ID: ${{ secrets.TF_API_TOKEN }}
-  AWS_SECRET_ACCESS_KEY: ${{ secrets.TF_API_TOKEN }}
-  AWS_SESSION_TOKEN: ${{ secrets.TF_API_TOKEN }}
-
-permissions:
-  contents: read
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
 
 jobs:
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
-    environment: production
 
     # Use the Bash shell 
     defaults:
