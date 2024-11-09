@@ -6,14 +6,11 @@ env:
   AWS_SECRET_ACCESS_KEY: ${{ secrets.TF_API_TOKEN }}
   AWS_SESSION_TOKEN: ${{ secrets.TF_API_TOKEN }}
 
-permissions:
-  contents: read
 
 jobs:
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
-    environment: production
 
     # Use the Bash shell 
     defaults:
