@@ -27,4 +27,4 @@ jobs:
       run: terraform init
 
     - name: Terraform Apply
-      run: terraform apply -auto-approve -input=false -var="bucket_name=${{ env.BUCKET_NAME }}" -var="lambda_name=${{ env.LAMBDA_NAME }}"
+      run: terraform apply -auto-approve -input=false -var="bucket_name=${{ vars.BUCKET_NAME }}" -var="lambda_name=${{ vars.LAMBDA_NAME }}"
